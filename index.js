@@ -54,3 +54,15 @@ function findById(items, idNum) {
   }
 }
 
+function validateKeys(object, expectedKeys) {  
+  if(Object.keys(object).length !== expectedKeys.length){
+    return false;
+  }
+  for(let i = 0; i < expectedKeys.length; i++){
+    if(!Object.keys(object).find(key => key === expectedKeys[i])){
+      return false;
+    }
+  }
+  return true;  
+}  
+
