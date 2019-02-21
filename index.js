@@ -26,3 +26,31 @@ function keyDeleter(obj) {
   delete obj.bar;
   return obj;
 }
+
+// object drills 2
+
+function makeStudentsReport(data) {
+  let studentReport = [];
+  for(let i = 0; i < data.length; i++) {
+    // studentReport.push(data[i].name+ ': '+ data[i].grade);
+    studentReport.push(data[i]['name']+ ': '+ data[i]['grade']);
+  }
+  return studentReport;
+}
+
+function enrollInSummerSchool(students) {
+  for(let i = 0;i < students.length; i++) {
+    students[i].status = 'In Summer School';
+    // console.log(Object.keys(students[i]).length);
+  }
+  return students;
+}
+
+function findById(items, idNum) {
+  for(let i=0;i <items.length;i++) {
+    if( items[i].id === idNum) {
+      return items[i];
+    }
+  }
+}
+
